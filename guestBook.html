@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>GuestBook - Tean's Blog</title>
+<meta name="keywords" content="Tean,Tean Wang,TeanWang,Tean的博客,王田" />
+<meta name="description" content="Tean的博客，用来记录生活和工作中的点点滴滴" />
+<link rel="stylesheet" href="__PUBLIC__/style/base.css" />
+<link rel="stylesheet" href="__PUBLIC__/style/pictonic.css">
+<!--[if lt IE 8]><script src="__PUBLIC__/js/pictonic.min.js"></script><![endif]-->
+</head>
+<body>
+<!-- MENU -->
+<div class="nav" id="nav">
+	<div class="line-a"></div>
+	<div class="line-b"></div>
+	<div class="line-c"></div>
+</div>
+<!-- LEFT MENU -->
+<div class="left-menu" id="navBar">
+    <ul class="lmenu">
+        <li><a href="/" id="myHome">首页 <span>Home</span></a></li>
+        <li><a href="{:U('Article/lifeList')}">生活 <span>My Life</span></a></li>
+        <li><a href="{:U('Article/workList')}">工作 <span>My Work</span></a></li>
+        <li><a href="{:U('Index/music')}">听音乐 <span>My Music</span></a></li>
+        <li><a href="/#about" >关于我 <span>About Me</span></a></li>
+        <li><a href="{:U('Index/guestBook')}" >留言薄 <span>GuestBook</span></a></li>
+        <li><a href="/#contact" >联系我 <span>Contact Me</span></a></li>
+    </ul>
+</div>
+<!-- #END MENU -->
+
+<!-- START -->
+<div class="main">
+	<h3 class="detail-title">留言本</span></h3>
+	<div class="detail-wrap">
+        有什么好的建议或者Bug，欢迎在此给我留言哈，我会及时回复您~
+	</div>
+	<div class="detail-info">
+
+		<div class="detail-replay">
+            <!-- 多说评论框 start -->
+            <div class="ds-thread" data-thread-key="{$arc.id}" data-title="{$arc.title}" data-url="__URL__/work/id/{$arc.id}"></div>
+            <!-- 多说评论框 end -->
+            <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+            <script type="text/javascript">
+                var duoshuoQuery = {short_name:"teanwang"};
+                (function() {
+                    var ds = document.createElement('script');
+                    ds.type = 'text/javascript';ds.async = true;
+                    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                    ds.charset = 'UTF-8';
+                    (document.getElementsByTagName('head')[0]
+                    || document.getElementsByTagName('body')[0]).appendChild(ds);
+                })();
+            </script>
+            <!-- 多说公共JS代码 end -->
+		</div>
+	</div>
+</div>
+<!-- #END START -->
+
+<!-- BG -->	
+<div class="bg-container">
+	<div id="video-container">
+	</div>
+	<div id="dots-layer"></div>
+</div>
+<!-- #END BG -->
+
+<!-- Background Music -->
+<div class="bg-music icon-google-currents" id="musicBar">
+	<audio src="__PUBLIC__/music/WonderWoman.mp3" autoplay loop="loop" id="myBgMusic"></audio>
+</div>
+<!-- #END Background Music -->
+
+<script type="text/javascript" src="__PUBLIC__/js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/index.js"></script>
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=44452942" charset="UTF-8"></script>
+</body>
+</html>
